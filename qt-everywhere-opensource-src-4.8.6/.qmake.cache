@@ -1,0 +1,34 @@
+CONFIG +=  cross_compile release embedded largefile exceptions_off dylib create_prl link_prl depend_includepath fix_output_dirs QTDIR_build
+QT_SOURCE_TREE = $$quote(/home/year/qt/qt-everywhere-opensource-src-4.8.6)
+QT_BUILD_TREE = $$quote(/home/year/qt/qt-everywhere-opensource-src-4.8.6)
+QT_BUILD_PARTS = libs translations
+QMAKE_ABSOLUTE_SOURCE_ROOT = $$QT_SOURCE_TREE
+QMAKE_MOC_SRC    = $$QT_BUILD_TREE/src/moc
+
+#local paths that cannot be queried from the QT_INSTALL_* properties while building QTDIR
+QMAKE_MOC        = $$QT_BUILD_TREE/bin/moc
+QMAKE_UIC        = $$QT_BUILD_TREE/bin/uic
+QMAKE_UIC3       = $$QT_BUILD_TREE/bin/uic3
+QMAKE_RCC        = $$QT_BUILD_TREE/bin/rcc
+QMAKE_QDBUSXML2CPP = $$QT_BUILD_TREE/bin/qdbusxml2cpp
+QMAKE_INCDIR_QT  = $$QT_BUILD_TREE/include
+QMAKE_LIBDIR_QT  = $$QT_BUILD_TREE/lib
+
+QMAKE_LFLAGS    = -Wl,-rpath-link,$$QT_BUILD_TREE/lib $$QMAKE_LFLAGS
+QT_LFLAGS_ODBC   = -lodbc
+QMAKESPEC = $$QT_BUILD_TREE/mkspecs/qws/linux-arm-hisiv500-g++
+styles += cde mac motif plastique cleanlooks windows
+decorations += default windows styled
+mouse-drivers += pc
+gfx-drivers += linuxfb
+mouse-drivers += linuxtp
+kbd-drivers += tty
+gfx-drivers += linuxfb
+JAVASCRIPTCORE_JIT = no
+PRECOMPILED_DIR = .pch/release-shared-emb-arm
+OBJECTS_DIR = .obj/release-shared-emb-arm
+MOC_DIR = .moc/release-shared-emb-arm
+RCC_DIR = .rcc/release-shared-emb-arm
+UI_DIR = .uic/release-shared-emb-arm
+sql-drivers =  sqlite
+sql-plugins = 

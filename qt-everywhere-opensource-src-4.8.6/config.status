@@ -1,0 +1,6 @@
+#!/bin/sh
+if [ "$#" -gt 0 ]; then
+  /home/year/qt/qt-everywhere-opensource-src-4.8.6/configure --prefix=/opt/qt4.8.6 -opensource -confirm-license -qt-sql-sqlite -qt-gfx-linuxfb -plugin-sql-sqlit -no-qt3support -no-phonon -no-svg -no-webkit -no-javascript-jit -no-script -no-scripttools -no-declarative -no-declarative-debug -qt-zlib -no-gif -qt-libtiff -qt-libpng -no-libmng -qt-libjpeg -no-rpath -no-pch -no-3dnow -no-avx -no-neon -no-openssl -no-nis -no-cups -no-dbus -embedded arm -platform linux-g++ -xplatform qws/linux-arm-hisiv500-g++ -little-endian -qt-freetype -no-opengl -no-glib -nomake demos -nomake examples -nomake docs -nomake tools "$@"
+else
+  /home/year/qt/qt-everywhere-opensource-src-4.8.6/configure --prefix=/opt/qt4.8.6 -opensource -confirm-license -qt-sql-sqlite -qt-gfx-linuxfb -plugin-sql-sqlit -no-qt3support -no-phonon -no-svg -no-webkit -no-javascript-jit -no-script -no-scripttools -no-declarative -no-declarative-debug -qt-zlib -no-gif -qt-libtiff -qt-libpng -no-libmng -qt-libjpeg -no-rpath -no-pch -no-3dnow -no-avx -no-neon -no-openssl -no-nis -no-cups -no-dbus -embedded arm -platform linux-g++ -xplatform qws/linux-arm-hisiv500-g++ -little-endian -qt-freetype -no-opengl -no-glib -nomake demos -nomake examples -nomake docs -nomake tools
+fi
